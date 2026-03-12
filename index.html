@@ -2,34 +2,96 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>منى مايفرندوو</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Francis - CV</title>
 
 <style>
 
-body{
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial;
-background:linear-gradient(135deg,#ff9ecf,#ffcce6);
-text-align:center;
-color:white;
-margin-top:120px;
 }
 
-h1{
-font-size:60px;
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+}
+
+.container{
+width:900px;
+background:rgba(0,0,0,0.7);
+border-radius:20px;
+padding:40px;
+box-shadow:0 0 30px rgba(0,0,0,0.6);
+backdrop-filter:blur(10px);
+animation:fadeIn 2s ease;
+}
+
+.header{
+text-align:center;
+margin-bottom:30px;
+}
+
+.header h1{
+font-size:40px;
+color:#00eaff;
+}
+
+.header p{
+font-size:18px;
+opacity:0.8;
+}
+
+.section{
+margin-top:25px;
+}
+
+.section h2{
+color:#00eaff;
+margin-bottom:10px;
+border-bottom:2px solid #00eaff;
+display:inline-block;
+padding-bottom:5px;
+}
+
+.info{
+margin-top:10px;
+line-height:28px;
+font-size:17px;
 }
 
 button{
-padding:15px 40px;
-font-size:20px;
+margin-top:30px;
+padding:12px 25px;
 border:none;
-border-radius:30px;
-background:white;
-color:#ff3399;
+border-radius:10px;
+background:#00eaff;
+color:black;
+font-size:16px;
 cursor:pointer;
+transition:0.3s;
 }
 
 button:hover{
-transform:scale(1.1);
+background:white;
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 </style>
@@ -38,14 +100,61 @@ transform:scale(1.1);
 
 <body>
 
-<h1>منى 💖</h1>
-<h2>هل تعرفينني حقًا؟</h2>
+<div class="container">
 
-<p>لدي لعبة صغيرة لك</p>
+<div class="header">
+<h1>Daniel Francis</h1>
+<p>Curriculum Vitae</p>
+</div>
 
-<a href="game.html">
-<button>ابدئي اللعبة</button>
-</a>
+<div class="section">
+<h2>المعلومات الشخصية</h2>
+<div class="info">
+<p><strong>الاسم:</strong> دانيال فرانسيس</p>
+<p><strong>تاريخ الميلاد:</strong> 2007</p>
+<p><strong>مكان الميلاد:</strong> الخرطوم</p>
+</div>
+</div>
+
+<div class="section">
+<h2>التعليم</h2>
+<div class="info">
+<p>درست حتى المرحلة الثانوية.</p>
+</div>
+</div>
+
+<div class="section">
+<h2>المهارات</h2>
+<div class="info">
+<p>- استخدام الحاسوب</p>
+<p>- التعلم السريع</p>
+<p>- العمل الجماعي</p>
+</div>
+</div>
+
+<div class="section">
+<h2>نبذة عني</h2>
+<div class="info">
+<p>
+شاب طموح أسعى لتطوير مهاراتي واكتساب خبرات جديدة في مجال العمل
+والتقنية. أحب التعلم واستكشاف الأشياء الجديدة.
+</p>
+</div>
+</div>
+
+<center>
+<button onclick="downloadCV()">تحميل السيرة الذاتية</button>
+</center>
+
+</div>
+
+<script>
+
+function downloadCV(){
+alert("يمكنك حفظ الصفحة كـ PDF من المتصفح لطباعة السيرة الذاتية.");
+}
+
+</script>
 
 </body>
-</html>
+  </html>
